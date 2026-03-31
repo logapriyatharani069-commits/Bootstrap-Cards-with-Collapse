@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Cards with Collapse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 4 CSS & JS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      background: #f4f6f9;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1 class="text-center mb-4">💳 Bootstrap Cards with Collapse</h1>
+
+  <!-- Standalone Collapse -->
+  <h2>Standalone Collapse</h2>
+  <p>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1">
+      Toggle Content
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample1">
+    <div class="card card-body bg-light">
+      This is some collapsible content. Click the button again to hide me.
+    </div>
+  </div>
+
+  <!-- Collapse inside a card -->
+  <h2>Collapse inside Card</h2>
+  <div class="card mb-3" style="width: 18rem;">
+    <div class="card-header bg-info text-white">Collapsible Card Header</div>
+    <div class="card-body">
+      <p class="card-text">Click the button to toggle more info.</p>
+      <button class="btn btn-success btn-sm" type="button" data-toggle="collapse" data-target="#collapseCard">
+        Show/Hide Details
+      </button>
+      <div class="collapse mt-2" id="collapseCard">
+        <div class="card card-body bg-light">
+          Here is some extra content inside the card. Perfect for FAQs or details.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multiple collapses -->
+  <h2>Multiple Collapsible Sections</h2>
+  <p>
+    <a class="btn btn-primary mr-2" data-toggle="collapse" href="#multiCollapse1">Section 1</a>
+    <a class="btn btn-warning" data-toggle="collapse" href="#multiCollapse2">Section 2</a>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapse1">
+        <div class="card card-body bg-primary text-white">
+          Content of Section 1
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapse2">
+        <div class="card card-body bg-warning text-dark">
+          Content of Section 2
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
